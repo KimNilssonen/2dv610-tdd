@@ -24,7 +24,7 @@ public class ConsoleViewTest {
 		sut = new ConsoleView(printStream);
 		sut.showMenu();
 		
-		verify(printStream).println();
+		verify(printStream).println("Higher or Lower!\nIs the next card (h)igher or (l)ower than the current card?\nPress \"q\" to (q)uit");
 	
 	}
 
