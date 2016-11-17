@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.io.PrintStream;
+import java.nio.Buffer;
 import java.util.Scanner;
 
 import org.junit.Before;
@@ -43,19 +44,12 @@ public class ConsoleViewTest {
 	public void shouldReturnUserInput() {
 		PrintStream printStream = mock(PrintStream.class);
 		sut = new ConsoleView(printStream);
-		
-		String data = "q";
-		InputStream inputStream = System.in;
-		System.setIn(inputStream);
-		
-		assertEquals(data, sut.waitForUserInput());		
-		
-		
-		
-//		String data = "q";
-//		InputStream in = new ByteArrayInputStream(data.getBytes());
-//		System.setIn(in);
 
-		
+	    String input = "q";
+	    InputStream in = new ByteArrayInputStream(input.getBytes());
+	    System.setIn(in);
+
+	    assertEquals("q", sut.waitForUserInput());
+
 	}
 }

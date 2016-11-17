@@ -26,8 +26,8 @@ public class ConsoleView {
 	}
 
 	public String waitForUserInput() {
-		// TODO Auto-generated method stub
-		return "";
+		Scanner keyboard = new Scanner(System.in);
+		return keyboard.next();
 	}
 
 }
