@@ -1,7 +1,6 @@
 package HigherLower;
 
 import java.io.PrintStream;
-import java.util.Scanner;
 
 public class ConsoleView {
 
@@ -21,10 +20,8 @@ public class ConsoleView {
 		return false;
 	}
 
-	public String showInputInstructionAndGetUserAction() {
+	public void showInputInstruction() {
 		output.println(INPUTINSTRUCTION);
-		Scanner keyboard = new Scanner(System.in);
-		return keyboard.next();
 	}
 
 }

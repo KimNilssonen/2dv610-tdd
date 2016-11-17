@@ -28,7 +28,7 @@ public class ConsoleViewTest {
 	public void shouldAskUserForInput() {
 		PrintStream printStream = mock(PrintStream.class);
 		sut = new ConsoleView(printStream);
-		sut.showInputInstructionAndGetUserAction();
+		sut.showInputInstruction();
 		
 		verify(printStream).println(ConsoleView.INPUTINSTRUCTION);
 	}

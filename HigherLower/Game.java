@@ -16,7 +16,7 @@ public class Game {
 	
 	public void run() {
 		view.showMenu();
-		view.showInputInstructionAndGetUserAction();
+		view.showInputInstruction();
 		
 	}
 

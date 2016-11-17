@@ -31,7 +31,7 @@ public class GameTest {
 		when(view.userQuits()).thenReturn(false);
 		sut.run();
 		
-		verify(view).showInputInstructionAndGetUserAction();
+		verify(view).showInputInstruction();
 		
 	}
 
