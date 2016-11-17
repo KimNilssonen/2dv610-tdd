@@ -27,7 +27,9 @@ public class ConsoleView {
 
 	public String waitForUserInput() {
 		Scanner keyboard = new Scanner(System.in);
-		return keyboard.next();
+		String string = keyboard.next();
+		keyboard.close();
+		return string;
 	}
 
 }
