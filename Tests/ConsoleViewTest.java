@@ -17,12 +17,20 @@ public class ConsoleViewTest {
 
 	@Test
 	public void shouldShowMenu() {
-		
 		PrintStream printStream = mock(PrintStream.class);
 		sut = new ConsoleView(printStream);
 		sut.showMenu();
 		
 		verify(printStream).println(ConsoleView.MENU);
+	}
+	
+	@Test
+	public void shouldAskUserForInput() {
+		PrintStream printStream = mock(PrintStream.class);
+		sut = new ConsoleView(printStream);
+		sut.showInputInstructionAndGetUserAction();
+		
+		verify(printStream).println(ConsoleView.INPUTINSTRUCTION);
 	}
 
 }

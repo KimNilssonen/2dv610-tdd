@@ -7,6 +7,7 @@ public class ConsoleView {
 
 	private PrintStream output;
 	public final static String MENU = "Higher or Lower!\nPress \"h\" to guess if the next card is higher or \"l\" to guess of the next card is lower\nPress \"s\" to start the game\nPress \"q\" to quit";
+	public final static String INPUTINSTRUCTION = "Is the next card (h)igher or (l)ower than the current card?";
 
 	public ConsoleView(PrintStream printStream) {
 		this.output = printStream;
@@ -20,7 +21,8 @@ public class ConsoleView {
 		return false;
 	}
 
-	public String getUserAction() {
+	public String showInputInstructionAndGetUserAction() {
+		output.println(INPUTINSTRUCTION);
 		Scanner keyboard = new Scanner(System.in);
 		return keyboard.next();
 	}
