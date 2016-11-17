@@ -1,6 +1,7 @@
 package HigherLower;
 
 import java.io.PrintStream;
+import java.util.Scanner;
 
 public class ConsoleView {
 
@@ -22,6 +23,11 @@ public class ConsoleView {
 
 	public void showInputInstruction() {
 		output.println(INPUTINSTRUCTION);
+	}
+
+	public String waitForUserInput() {
+		// TODO Auto-generated method stub
+		return "";
 	}
 
 }
