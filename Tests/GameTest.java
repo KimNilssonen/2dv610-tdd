@@ -1,6 +1,5 @@
 package Tests;
 
-import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,13 +16,26 @@ public class GameTest {
 	}
 
 	@Test
-	public void test() {
+	public void shouldShowMenu() {
 		ConsoleView view = mock(ConsoleView.class);
 		sut = new Game(view);
 		
+		when(view.userQuits()).thenReturn(false);
+		
 		sut.run();
 		
-		verify(view).showMenu();
+		verify(view).showMenu();		
+	}
+	
+	@Test
+	public void shouldAskUserForAction() {
+		ConsoleView view = mock(ConsoleView.class);
+		sut = new Game(view);
+		when(view.userQuits()).thenReturn(false);
+		
+		sut.run();
+		
+		verify(view).getUserAction();
 		
 	}
 

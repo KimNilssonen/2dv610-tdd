@@ -23,7 +23,6 @@ public class ConsoleViewTest {
 		sut.showMenu();
 		
 		verify(printStream).println(ConsoleView.MENU);
-	
 	}
 
 }
