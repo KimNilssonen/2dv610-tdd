@@ -1,5 +1,6 @@
 package HigherLower;
 
+
 public class Game {
 
 	private ConsoleView view;
@@ -15,6 +16,8 @@ public class Game {
 	
 	public void run() {
 		view.showMenu();
+		view.showInputInstructionAndGetUserAction();
+		
 	}
 
 }
