@@ -27,12 +27,10 @@ public class GameTest {
 	}
 	
 	@Test
-	public void shouldAskUserForAction() {
+	public void shouldShowInstructions() {
 		when(view.userQuits()).thenReturn(false);
 		sut.run();
 		
-		verify(view).showInputInstruction();
-		
+		verify(view).showInputInstruction();		
 	}
-
 }
