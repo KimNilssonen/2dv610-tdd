@@ -10,18 +10,17 @@ import HigherLower.Game;
 public class GameTest {
 
 	private Game sut;
+	private ConsoleView view;
 	
 	@Before
 	public void setUp() throws Exception {
+		view = mock(ConsoleView.class);
+		sut = new Game(view);
 	}
 
 	@Test
-	public void shouldShowMenu() {
-		ConsoleView view = mock(ConsoleView.class);
-		sut = new Game(view);
-		
+	public void shouldShowMenu() {		
 		when(view.userQuits()).thenReturn(false);
-		
 		sut.run();
 		
 		verify(view).showMenu();		
@@ -29,10 +28,7 @@ public class GameTest {
 	
 	@Test
 	public void shouldAskUserForAction() {
-		ConsoleView view = mock(ConsoleView.class);
-		sut = new Game(view);
 		when(view.userQuits()).thenReturn(false);
-		
 		sut.run();
 		
 		verify(view).getUserAction();
